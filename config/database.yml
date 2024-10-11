@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: mysite_production
+  database: mysite
   username: hossain_araf
   password: Hoss2575#
