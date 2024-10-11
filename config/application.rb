@@ -20,6 +20,17 @@ module Mysite
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
+
+    # Add Rack::Cors middleware to handle Cross-Origin Resource Sharing (CORS)
+    # so that your API can accept requests from other domains
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'  # You can specify domains instead of '*' for more security
+        resource '*', 
+          headers: :any,
+          methods: [:get, :post, :patch, :put, :delete, :options, :head]
+      end
+    end
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
