@@ -81,7 +81,10 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  # url: <%= ENV["DATABASE_URL"] %>
   database: mysite
+  host: dpg-cs4i97btq21c73fu6ii0-a
   username: hossain_araf
   password: Hoss2575#
+  pool: 5
+  timeout: 5000
