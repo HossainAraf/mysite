@@ -1,7 +1,11 @@
 class Api::V1::SpecificationsController < ApplicationController
-  def index #
+  def index
     specifications = Specification.all
-    render json: specifications
+    if specifications.any?
+      render json: specifications, status: :ok
+    else
+      render json: { message: 'No specifications found' }, status: :ok
+    end
   end
 
   def show

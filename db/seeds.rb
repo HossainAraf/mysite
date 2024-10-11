@@ -9,5 +9,5 @@
 #   end
 
 # Create a specification
-Specification.create(name: "Specification A")
+Specification.create(name: "Specification ABO")
 
