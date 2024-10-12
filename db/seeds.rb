@@ -8,6 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# Create a specification
-Specification.create(name: "Specification ABO")
+# Find the specification by id and update its name
+specification = Specification.find_by(id: 2)
+if specification
+  specification.update(name: 'ZXY-1')
+else
+  puts "Specification with id 1 not found"
+end
+
 
